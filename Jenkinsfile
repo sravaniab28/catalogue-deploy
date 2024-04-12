@@ -8,6 +8,7 @@ pipeline {
         stage('Deploy'){
             steps{
                echo "Deploying.."
+               echo "version from params: ${params.Version}"
             }
         }
        
