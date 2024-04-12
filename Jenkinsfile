@@ -14,8 +14,6 @@ pipeline {
         stage('Init'){
             steps{
               sh '''
-               set +e
-               ..
                cd terraform
                terraform init -reconfigure
               '''
@@ -24,8 +22,7 @@ pipeline {
         stage('plan'){
             steps{
               sh '''
-               set +e
-               ..
+               
                cd terraform
                terraform plan
               '''
