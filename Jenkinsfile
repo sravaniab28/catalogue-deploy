@@ -13,19 +13,19 @@ pipeline {
         }
         stage('Init'){
             steps{
-              sh '''
+              sh """
                cd terraform
                terraform init -reconfigure
-              '''
+              """
             }
         }   
         stage('plan'){
             steps{
-              sh '''
-               
+                sh """
+              
                cd terraform
                terraform plan
-              '''
+              """
             }
         }       
     }
